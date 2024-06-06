@@ -15,14 +15,6 @@ repeat
  local menu = game:GetObjects("rbxassetid://17754534640")[1] 
  local tabholder = menu.bg.bg.bg.bg.bg.bg.main.group;
  local tabviewer = menu.bg.bg.bg.bg.bg.bg.tabbuttons;
- for _, obj in pairs(menu:GetDescendants()) do
-    if obj.Name:lower():find('userlabel') then
-        obj.Text = 'active user: <font color="rgb(115, 100, 215)">' .. game.Players.LocalPlayer.Name .. '</font>'
-    end
-    if obj.Name:lower():find('buildlabel') then
-        obj.Text = 'build: <font color="rgb(115, 100, 215)">Public</font>'
-    end
- end
  
  --vars
  local CloneCore = cloneref(game.CoreGui)
@@ -290,14 +282,14 @@ repeat
          local ping = string.format('%.0f', game.Stats.Network.ServerStatsItem["Data Ping"]:GetValue())
          local uid = "1"
          local fpsValue = string.split(game.Stats.Workspace.Heartbeat:GetValueString(), ".")[1]
-         WaterMarkLabel.Text = 'skyro.<font color="rgb(100, 165, 215)">wtf</font> - uid: <font color="rgb(100, 165, 215)">' .. uid .. '</font> / fps: <font color="rgb(115, 100, 215)">' .. fpsValue .. '</font> / ping: <font color="rgb(115, 100, 215)">' .. ping .. '</font> / time: <font color="rgb(115, 100, 215)">' .. time .. '</font>'
+         WaterMarkLabel.Text = 'eclipse.<font color="rgb(115, 100, 215)">wtf</font> - uid: <font color="rgb(100, 165, 215)">' .. uid .. '</font> / fps: <font color="rgb(115, 100, 215)">' .. fpsValue .. '</font> / ping: <font color="rgb(115, 100, 215)">' .. ping .. '</font> / time: <font color="rgb(115, 100, 215)">' .. time .. '</font>'
        end
     end)
     return Watermark
  end
  
  local library = {
-    Title = 'skryo.<font color="rgb100, 165, 215)">wtf</font> || Da Hood',
+    Title = 'skyro.<font color="rgb(115, 100, 215)">wtf</font> || Da Hood',
     keybind = Enum.KeyCode.RightBracket,
     Watermark = createWatermark(),
        Colors = {
